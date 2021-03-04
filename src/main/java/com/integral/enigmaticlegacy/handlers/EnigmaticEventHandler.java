@@ -949,10 +949,7 @@ public class EnigmaticEventHandler {
 			 * Immortality handler for Heart of Creation and Pearl of the Void.
 			 */
 
-			if (SuperpositionHandler.hasCurio(player, EnigmaticLegacy.enigmaticItem) || player.inventory.hasItemStack(new ItemStack(EnigmaticLegacy.enigmaticItem)) || event.getSource() instanceof DamageSourceNemesisCurse) {
-				event.setCanceled(true);
-				player.setHealth(1);
-			} else if (SuperpositionHandler.hasCurio(player, EnigmaticLegacy.voidPearl) && Math.random() <= VoidPearl.undeadProbability.getValue().asMultiplier(false)) {
+			if (SuperpositionHandler.hasCurio(player, EnigmaticLegacy.voidPearl) && Math.random() <= VoidPearl.undeadProbability.getValue().asMultiplier(false)) {
 				event.setCanceled(true);
 				player.setHealth(1);
 			}
